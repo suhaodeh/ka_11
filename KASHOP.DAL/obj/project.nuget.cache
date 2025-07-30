@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hr2KbZZolhg=",
+  "dgSpecHash": "Rk7ztUQ6bZI=",
   "success": true,
-  "projectFilePath": "D:\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+  "projectFilePath": "D:\\API\\Project\\KAshop\\KASHOP.DAL\\KASHOP.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\عسثق\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\عسثق\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

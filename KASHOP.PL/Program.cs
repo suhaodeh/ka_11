@@ -1,9 +1,11 @@
-
-using KASHOP.BLL.Services;
+using KASHOP.BLL.Services.Classes;
+using KASHOP.BLL.Services.Interfaces;
 using KASHOP.DAL.Data;
-using KASHOP.DAL.Repositories;
+using KASHOP.DAL.Repositories.Classes;
+using KASHOP.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Scalar;
+
 using Scalar.AspNetCore;
 namespace KASHOP.PL
 {
@@ -22,6 +24,8 @@ namespace KASHOP.PL
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+            builder.Services.AddScoped<IBrandservice,BrandService>();
 
             var app = builder.Build();
 
