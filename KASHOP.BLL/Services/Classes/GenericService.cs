@@ -38,9 +38,13 @@ namespace KASHOP.BLL.Services.Classes
             return _repository.Remove(entity);
         }
 
-        public IEnumerable<TResponse> GetAll()
+        public IEnumerable<TResponse> GetAll(bool onlyActive=false)
         {
             var entity = _repository.GetAll();
+            if (onlyActive)
+            {
+                entity = entity.Where(e => e.status == Status.Active);
+            }
             return entity.Adapt<IEnumerable<TResponse>>();
         }
 

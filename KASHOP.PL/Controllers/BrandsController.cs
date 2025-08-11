@@ -1,5 +1,6 @@
 ﻿using KASHOP.BLL.Services.Interfaces;
 using KASHOP.DAL.DTO.Requests;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace KASHOP.PL.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BrandsController : ControllerBase
     {
 
@@ -19,8 +21,9 @@ namespace KASHOP.PL.Controllers
         [HttpGet("")]
         public IActionResult GetAll()
         {
-            return Ok(brandService.GetAll());
+            return Ok(brandService.GetAll(true));
         }
+
         [HttpGet("{id}")]
         public IActionResult Get([FromRoute] int id)
         {
@@ -29,6 +32,7 @@ namespace KASHOP.PL.Controllers
             return Ok(brand);
 
         }
+
 
         [HttpPost("")]
         public IActionResult Create([FromBody] BrandRequest request)
