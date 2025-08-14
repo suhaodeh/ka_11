@@ -33,13 +33,16 @@ namespace KASHOP.PL
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IBrandRepository, BrandRepository>();
             builder.Services.AddScoped<IBrandservice,BrandService>();
             builder.Services.AddScoped<ISeedData,SeedData>();
 
             builder.Services.AddScoped<IAuthenticationService,AuthenticationService>();
             builder.Services.AddScoped<IEmailSender, EmailSetting>();
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options)
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 
@@ -83,6 +86,7 @@ namespace KASHOP.PL
             app.UseAuthentication();
 
             app.UseAuthorization();
+            app.UseStaticFiles();
 
 
             app.MapControllers();

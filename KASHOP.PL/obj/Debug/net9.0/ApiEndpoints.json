@@ -11,6 +11,27 @@
   },
   {
     "ContainingType": "KASHOP.PL.Area.Admin.Controllers.BrandsController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Brands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MainImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.BrandsController",
     "Method": "Get",
     "RelativePath": "api/Admin/Brands/{id}",
     "HttpMethod": "GET",
@@ -26,51 +47,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Brands",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Create",
-    "RelativePath": "api/Brands",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "KASHOP.DAL.DTO.Requests.BrandRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Get",
-    "RelativePath": "api/Brands/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.BrandsController",
     "Method": "Update",
-    "RelativePath": "api/Brands/{id}",
+    "RelativePath": "api/Admin/Brands/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -89,9 +68,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.BrandsController",
     "Method": "Delete",
-    "RelativePath": "api/Brands/{id}",
+    "RelativePath": "api/Admin/Brands/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -105,9 +84,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.BrandsController",
     "Method": "ToggleStatus",
-    "RelativePath": "api/Brands/ToggleStatus/{id}",
+    "RelativePath": "api/Admin/Brands/ToggleStatus/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -121,9 +100,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.CategoriesController",
     "Method": "GetAll",
-    "RelativePath": "api/Categories",
+    "RelativePath": "api/Admin/Categories",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -131,9 +110,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.CategoriesController",
     "Method": "Create",
-    "RelativePath": "api/Categories",
+    "RelativePath": "api/Admin/Categories",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -147,9 +126,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.CategoriesController",
     "Method": "Get",
-    "RelativePath": "api/Categories/{id}",
+    "RelativePath": "api/Admin/Categories/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -163,9 +142,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.CategoriesController",
     "Method": "Update",
-    "RelativePath": "api/Categories/{id}",
+    "RelativePath": "api/Admin/Categories/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -184,9 +163,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.CategoriesController",
     "Method": "Delete",
-    "RelativePath": "api/Categories/{id}",
+    "RelativePath": "api/Admin/Categories/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -200,9 +179,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.CategoriesController",
     "Method": "ToggleStatus",
-    "RelativePath": "api/Categories/ToggleStatus/{id}",
+    "RelativePath": "api/Admin/Categories/ToggleStatus/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -211,6 +190,72 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.ProductsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admin/Products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP.PL.Area.Admin.Controllers.ProductsController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Products/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MainImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rate",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -229,6 +274,32 @@
     "ContainingType": "KASHOP.PL.Area.Customer.Controllers.BrandsController",
     "Method": "Get",
     "RelativePath": "api/Customer/Brands/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP.PL.Area.Customer.CategoriesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Customer/Categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP.PL.Area.Customer.CategoriesController",
+    "Method": "Get",
+    "RelativePath": "api/Customer/Categories/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -263,6 +334,32 @@
     "ReturnTypes": [
       {
         "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KASHOP.PL.Area.Identity.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Identity/Account/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "KASHOP.DAL.DTO.Requests.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -325,16 +422,22 @@
     ]
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "KASHOP.PL.Area.Identity.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Identity/Account/reset-password",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Microsoft.AspNetCore.Identity.Data.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[KASHOP.PL.WeatherForecast, KASHOP.PL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -342,7 +445,6 @@
         ],
         "StatusCode": 200
       }
-    ],
-    "EndpointName": "GetWeatherForecast"
+    ]
   }
 ]

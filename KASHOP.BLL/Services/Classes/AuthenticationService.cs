@@ -128,6 +128,23 @@ namespace KASHOP.BLL.Services.Classes
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
+    
+
+        public async Task<bool> ResetPassword(ResetPasswordRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user is null) throw new Exception("user not found");
+
+            if (user.CodeResetPassword != request.ResetCode) return false;
+            if (user.PasswordResetCodeExpiry < DateTime.UtcNow) return false;
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await _userManager.ResetPasswordAsync(user, token, request.NewPassword);
+            if (result.Succeeded)
+
+                await _emilSender.SendEmailAsync(request.Email, "Change Password", "<h1> your password is changed </h1>");
+            return true;
+        }
+
         public async Task<bool> ForgotPassword(ForgotPasswordRequest request)
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
@@ -141,21 +158,6 @@ namespace KASHOP.BLL.Services.Classes
             user.PasswordResetCodeExpiry = DateTime.UtcNow.AddMinutes(15);
             await _userManager.UpdateAsync(user);
             await _emilSender.SendEmailAsync(request.Email, "reset password", $"<p>code is {code} </p>");
-            return true;
-        }
-
-        public async Task<bool> ResetPassword(ResetPasswordRequest request)
-        {
-            var user = await _userManager.FindByEmailAsync(request.Email);
-            if (user is null) throw new Exception("user not found");
-
-            if (user.CodeResetPassword != request.Code) return false;
-            if (user.PasswordResetCodeExpiry < DateTime.UtcNow) return false;
-            var token = await _userManager.GeneratePasswordResetTokenasync(user);
-            var result = await _userManager.ResetPasswordAsync(user, token, request.NewPassword);
-            if (result.Succeeded)
-
-                await _emilSender.SendEmailAsync(request.Email, "Change Password", "<h1> your password is changed </h1>");
             return true;
         }
     }

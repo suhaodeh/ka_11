@@ -46,17 +46,19 @@ namespace KASHOP.PL.Area.Identity.Controllers
         }
 
         [HttpPost("forgot-password")]
-        public async Task<ActionResult<string>> ForgotPassword([FromBody] ForgotPasswordRequest request)
+        public async Task<ActionResult<bool>> ForgotPassword([FromBody] ForgotPasswordRequest request)
         {
             var result = await _authenticationService.ForgotPassword(request);
             return Ok(result);
         }
 
         [HttpPatch("reset-password")]
-        public async Task<string> ResetPassword([FromBody] ResetPasswordRequest request)
+        public async Task<ActionResult<string>> ResetPassword([FromBody] ResetPasswordRequest request)
         {
             var result = await _authenticationService.ResetPassword(request);
-        return Ok(result);
 
-    } }
+            return Ok(result);
+
+        }
+    }
 }

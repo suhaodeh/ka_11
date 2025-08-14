@@ -103,6 +103,7 @@ namespace KASHOP.DAL.Utilities
 
 
             }
+            await _context.SaveChangesAsync();
 
         }
     }

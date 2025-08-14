@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using KASHOP.DAL.DTO.Requests;
 using KASHOP.DAL.DTO.Responses;
 using Microsoft.AspNetCore.Identity.Data;
+using ForgotPasswordRequest = KASHOP.DAL.DTO.Requests.ForgotPasswordRequest;
 using LoginRequest = KASHOP.DAL.DTO.Requests.LoginRequest;
 using RegisterRequest = KASHOP.DAL.DTO.Requests.RegisterRequest;
 
@@ -17,7 +18,7 @@ namespace KASHOP.BLL.Services.Interfaces
         Task<UserResponse> RegisterAsync(RegisterRequest registerRequest);
         Task<string> ConfirmEmail(string token,string userId);
         Task<bool> ForgotPassword(ForgotPasswordRequest request);
-         Task<bool> ResetPassword(ResetPasswordRequest request)
+        Task<bool> ResetPassword(ResetPasswordRequest request);
 
     }
 }

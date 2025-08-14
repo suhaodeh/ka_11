@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/KASHOP.PL/Images/a24adc1186e44cfea8b639f5d6a7f9d0.3z77mfjvx2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\a24adc1186e44cfea8b639f5d6a7f9d0.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3z77mfjvx2"},{"Name":"integrity","Value":"sha256-4XlGMxRLIrqqtryR6iTqQvNFyk9DIvvO4q7hZ4MznpI="},{"Name":"label","Value":"_content/KASHOP.PL/Images/a24adc1186e44cfea8b639f5d6a7f9d0.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6976"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224XlGMxRLIrqqtryR6iTqQvNFyk9DIvvO4q7hZ4MznpI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 14 Aug 2025 19:20:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KASHOP.PL/Images/a24adc1186e44cfea8b639f5d6a7f9d0.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\a24adc1186e44cfea8b639f5d6a7f9d0.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4XlGMxRLIrqqtryR6iTqQvNFyk9DIvvO4q7hZ4MznpI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6976"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224XlGMxRLIrqqtryR6iTqQvNFyk9DIvvO4q7hZ4MznpI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 14 Aug 2025 19:20:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KASHOP.PL/Images/deb2debccd544adca47dca4d0b5b8975.dulwmw5rgb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\deb2debccd544adca47dca4d0b5b8975.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dulwmw5rgb"},{"Name":"integrity","Value":"sha256-lZwH67FEIukoAHbRmbyiTWzflKjL1AlmXCq9cwgKVJE="},{"Name":"label","Value":"_content/KASHOP.PL/Images/deb2debccd544adca47dca4d0b5b8975.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19611"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022lZwH67FEIukoAHbRmbyiTWzflKjL1AlmXCq9cwgKVJE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 14 Aug 2025 19:19:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KASHOP.PL/Images/deb2debccd544adca47dca4d0b5b8975.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\deb2debccd544adca47dca4d0b5b8975.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lZwH67FEIukoAHbRmbyiTWzflKjL1AlmXCq9cwgKVJE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"19611"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022lZwH67FEIukoAHbRmbyiTWzflKjL1AlmXCq9cwgKVJE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 14 Aug 2025 19:19:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

@@ -11,6 +11,9 @@ using KASHOP.DAL.Repositories.Interfaces;
 
 namespace KASHOP.BLL.Services.Interfaces
 {
-    public interface IBrandservice : IGenericService<BrandRequest, BrandResponse, Brand> { }
+    public interface IBrandservice : IGenericService<BrandRequest, BrandResponse, Brand> {
+
+        Task<int> CreateFile(BrandRequest request);
+            }
  
 }
